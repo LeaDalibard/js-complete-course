@@ -10,9 +10,8 @@
 // You will have time to focus on it later.
 
 (function () {
-    var yes = "yes"
     var cake = prompt("Do you want some cake?");
-    if (cake == yes) {
+    if (cake == "yes") {
         alert("Great choice!")
     } else {
         alert("More cake for me then :p !")
