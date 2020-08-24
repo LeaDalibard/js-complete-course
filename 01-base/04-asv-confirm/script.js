@@ -10,7 +10,14 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
-
+    var age = prompt("How old are you ?");
+    var gender = prompt("What is your gender?");
+    var town = prompt("In which town do you live ?");
+    var verif = confirm("Your are "+ age +", your gender is "+ gender +", and you live in "+ town +". Please confirm.");
+    while (verif == false) {
+        var age = prompt("How old are you ?");
+        var gender = prompt("What is your gender?");
+        var town = prompt("In which town do you live ?");
+        var verif = confirm("Your are "+ age +", your gender is "+ gender +", and you live in "+ town +". Please confirm.");
+    }
 })();
