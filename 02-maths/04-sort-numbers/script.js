@@ -15,8 +15,15 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        var number = document.getElementById("numbers").value;
+        var array = JSON.parse("[" + number + "]");
+        array.sort(function(a, b){return a-b});
+        document.getElementById("numbers").value= array;
+
 
     });
 
 })();
+
+
+
