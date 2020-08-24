@@ -15,7 +15,8 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        var number = document.getElementById("number").value;
+
 
     });
 
