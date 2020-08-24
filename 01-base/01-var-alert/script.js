@@ -11,6 +11,7 @@
 
 (function() {
 
-    // your code here
+    var myString = "Hello, World!";
+    alert (myString);
 
 })();
