@@ -45,7 +45,7 @@
             var month = 'february';
             break;
         case 2:
-            var month = 'mart';
+            var month = 'march';
             break;
         case 3:
             var month = 'april';

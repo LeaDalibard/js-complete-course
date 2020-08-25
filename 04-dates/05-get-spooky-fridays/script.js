@@ -23,7 +23,47 @@
                 fridayMonth.push(month);
             }
         }
-        alert (fridayMonth[0])
+        for (i=0; i<12; i++) {
+            switch (fridayMonth[i]) {
+                case 0:
+                    fridayMonth[i] = 'january';
+                    break;
+                case 1:
+                    fridayMonth[i] = 'february';
+                    break;
+                case 2:
+                    fridayMonth[i] = 'march';
+                    break;
+                case 3:
+                    fridayMonth[i] = 'april';
+                    break;
+                case 4:
+                    fridayMonth[i] = 'may';
+                    break;
+                case 5:
+                    fridayMonth[i] = 'june';
+                    break;
+                case 6:
+                    fridayMonth[i] = 'july';
+                    break;
+                case 7:
+                    fridayMonth[i] = 'august';
+                    break;
+                case 8:
+                    fridayMonth[i] = 'september';
+                    break;
+                case 9:
+                    fridayMonth[i] = 'october';
+                    break;
+                case 10:
+                    fridayMonth[i] = 'november';
+                    break;
+                case 11:
+                    fridayMonth[i] = 'december';
+                    break;
+            }
+        }
+        alert ('Months with a friday 13 : ' + fridayMonth );
     });
 
 })();
