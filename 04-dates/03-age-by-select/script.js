@@ -14,11 +14,11 @@
     // your code here
     document.getElementById("run").addEventListener("click", function () {
         var day = +document.getElementById("dob-day").value;
-        var monthbd = +document.getElementById("dob-month").value;
+        var monthb = +document.getElementById("dob-month").value;
         var year = +document.getElementById("dob-year").value;
         var today = new Date();
         var age = today.getFullYear()- year;
-        var month = today.getMonth()-monthbd;
+        var month = today.getMonth()- monthb - 1;
         if (month < 0 || (month === 0 && today.getDate() < day)) {
             age = age - 1;
         }

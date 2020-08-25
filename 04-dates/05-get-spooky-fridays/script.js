@@ -9,8 +9,21 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
 
-    // your code here
+(function () {
+
+    document.getElementById("run").addEventListener("click", function () {
+        var d = new Date();
+        var fridayMonth = [];
+        var year = +document.getElementById("year").value;
+        var month;
+        for (month = 0; month < 12; month++) {
+            d.setFullYear(year, month, 13);
+            if (d.getDay() == 5) {
+                fridayMonth.push(month);
+            }
+        }
+        alert (fridayMonth[0])
+    });
 
 })();
