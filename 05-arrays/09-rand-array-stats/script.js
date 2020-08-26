@@ -9,8 +9,19 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+        const length = 10
+        const randomArray = []
+        for (let i = 0; i < length; i++) {
+            randomArray.push(Math.floor(Math.random() * 101))
+        }
+        var x = document.getElementsByTagName("td");
+        for (let i = 0; i < length; i++) {
+            x[i].innerHTML = randomArray[i];
+        }
+
+    });
 
 })();
