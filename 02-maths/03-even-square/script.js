@@ -13,7 +13,7 @@
     var i=1;
     document.getElementById("run").addEventListener("click", function() {
         while (i < 22) {
-            alert("The square of " + i + " is " + i*i);
+            console.log("The square of " + i + " is " + i*i);
             i++;
         }
     });
