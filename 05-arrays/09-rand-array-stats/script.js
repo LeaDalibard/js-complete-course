@@ -21,15 +21,15 @@
         for (let i = 0; i < length; i++) {
             x[i].innerHTML = randomArray[i];
         }
-        var min = Math.min(...randomArray)
+        const min = Math.min(...randomArray)
         document.getElementById("min").innerHTML = min
-        var max = Math.max(...randomArray)
+        const max = Math.max(...randomArray)
         document.getElementById("max").innerHTML = max
-        var sum = randomArray.reduce(function(a, b){
+        const sum = randomArray.reduce(function(a, b){
             return a + b;
         }, 0);
         document.getElementById("sum").innerHTML = sum
-        const avg =randomArray.reduce(function(a,b){return(a+b)/ randomArray.length} , 0);
+        const avg =sum/ randomArray.length
         document.getElementById("average").innerHTML = avg
     });
 
