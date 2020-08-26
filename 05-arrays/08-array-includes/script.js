@@ -27,7 +27,10 @@
     ];
 
     document.getElementById("run").addEventListener("click", function () {
-            let apple;
+        var n = fruits.includes("apple", 0);
+        console.log(n);
+
+          /*  let apple;
             apple = 0;
             for (i = 0; i < fruits.length; i++) {
                 if (fruits[i] === "apple") {
@@ -38,7 +41,7 @@
                 console.log('There is apple in the array');
             } else {
                 console.log('There is no apple in the array');
-            }
+            }*/
         }
     );
 
