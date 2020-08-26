@@ -89,6 +89,11 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+        const sum = people.reduce(function(a, b){
+            return a + b.age;
+        }, 0);
+        console.log(sum);
+    });
 
 })();
