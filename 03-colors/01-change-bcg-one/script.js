@@ -8,30 +8,28 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-function changeBackground(color) {
-    document.body.style.background = color;
-}
+
 
 (function() {
     document.getElementById("red").addEventListener("click", function() {
 
-        changeBackground('red');
+        document.body.style.background = 'red';
 
     });
     document.getElementById("green").addEventListener("click", function() {
 
-        changeBackground('green');
+        document.body.style.background = 'green';
 
     });
 
     document.getElementById("yellow").addEventListener("click", function() {
 
-        changeBackground('yellow');
+        document.body.style.background = 'yellow';
 
     });
     document.getElementById("blue").addEventListener("click", function() {
 
-        changeBackground('blue');
+        document.body.style.background = 'blue';
 
     });
 })();
