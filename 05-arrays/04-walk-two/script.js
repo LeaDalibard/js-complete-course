@@ -9,6 +9,10 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+function myFunction(item, index, arr) {
+    console.log(arr[index]);
+}
+
 (function() {
 
     var fruits = [
@@ -26,6 +30,8 @@
         "cerise",
     ];
 
-    // your code here
-
+    document.getElementById("run").addEventListener("click", function () {
+        fruits.forEach(myFunction)
+    }
+);
 })();
