@@ -27,8 +27,7 @@
     ];
 
     document.getElementById("run").addEventListener("click", function () {
-        var n = fruits.includes("apple", 0);
-        console.log(n);
+        console.log(fruits.includes("apple", 0));
 
           /*  let apple;
             apple = 0;
