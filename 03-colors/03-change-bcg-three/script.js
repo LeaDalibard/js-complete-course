@@ -8,16 +8,13 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-function changeBackground(color) {
-    document.body.style.background = color;
-}
 
 (function() {
 
     document.getElementById("run").addEventListener("click", function() {
         var randomColor = Math.floor(Math.random()*16777215).toString(16);
         var color = '#' + randomColor;
-       changeBackground(color);
+        document.body.style.background = color;
     });
 
 })();
