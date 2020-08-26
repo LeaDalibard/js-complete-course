@@ -89,6 +89,20 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+            var i;
+            for(i=0; i<people.length; i++)
+            {
+                if(people[i].firstname=="Jean" &&  people[i].lastname=="Dupont")
+                {
+                   var x = i;
+                    break;
+                }
+            }
+            var y=people[x].email;
+            console.log(y);
+            console.log(x);
+    }
+    );
 
 })();
