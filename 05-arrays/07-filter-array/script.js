@@ -90,7 +90,7 @@
     ];
 
     document.getElementById("run").addEventListener("click", function () {
-            var adult=[];
+           /* var adult=[];
             var i;
             for(var i=0 in people)
             {
@@ -98,7 +98,10 @@
                 {
                     adult.push(people[i]);
                 }
-            }
+            }*/
+        const adult = people.filter(function(people) {
+            return people.age> 18;
+        })
             console.log(adult);
         }
     );
