@@ -10,7 +10,9 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
-
+    var x, i;
+    x = document.querySelectorAll(".target");
+    for (i = 0; i < x.length; i++) {
+        x[i].innerHTML = "Owned";
+    }
 })();
