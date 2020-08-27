@@ -92,7 +92,7 @@
     document.getElementById("run").addEventListener("click", function () {
             var adult=[];
             var i;
-            for(i=0; i<people.length; i++)
+            for(var i=0 in people)
             {
                 if(people[i].age>18)
                 {
