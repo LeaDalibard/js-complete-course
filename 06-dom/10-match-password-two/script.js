@@ -10,7 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
+    run.onclick = function () {
+        var passOne = document.getElementById("pass-one").value;
+        var passTwo = document.getElementById("pass-two").value;
+        if (passOne !== passTwo) {
+            var x = document.querySelectorAll("input");
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.add("error");
+            }
+        }
+    }
 
 })();
