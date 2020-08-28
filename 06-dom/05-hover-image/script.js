@@ -10,7 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
+let hover =document.querySelector("img").getAttribute("data-hover");
+    let src =document.querySelector("img").getAttribute("src");
 
-    // your code here
+    document.querySelector("img").addEventListener('mouseover', function() {
+        this.src = hover
+    })
+    document.querySelector("img").addEventListener('mouseout', function() {
+        this.src = src
+    })
 
 })();
+
