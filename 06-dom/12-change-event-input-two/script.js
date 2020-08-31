@@ -9,8 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    // your code here
+    document.getElementById("pass-one").onchange = function () {
+        var pass = document.getElementById("pass-one").value
+        var passw = /^(?=.*\d){2,}.{8,}$/;
+        if (pass.match(passw)) {
+            validity.innerHTML = "Ok"
+        }
+    }
 
 })();
+
+//[0-9]{2,}.{8,}$/;
