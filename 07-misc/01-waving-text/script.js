@@ -10,24 +10,40 @@
 // You will have time to focus on it later.
 
 (function () {
-    let wawe=[];
-    var font=1;
-    var str = Array.from("Wouhouuuuu waaaawe");
-    for (let i = 0; i <= 5; i++) {
-        var y =str[i].fontsize(font);
-        font++;
-        wawe.push(y);
+    var txt = 'Wouhouuuuu waaaawe';
+    let j = 1
+    for (let i = 0; i < txt.length; i++) {
+        if (i < txt.length && i < 6) {
+            var y = txt.charAt(i).fontsize(j);
+            document.getElementById("target").innerHTML += y;
+            j++;
+        }
+        if (i < txt.length && i > 5) {
+            var y = txt.charAt(i).fontsize(j);
+            document.getElementById("target").innerHTML += y;
+            j--;
+        }
     }
-    for (let i = 6; i <= 11; i++) {
-        var y =str[i].fontsize(font);
-        font--;
-        wawe.push(y);
-    }
-    for (let i = 12; i <= 17; i++) {
-        var y =str[i].fontsize(font);
-        font--;
-        wawe.push(y);
-    }
-    document.getElementById("target").innerHTML = wawe.join('');
+
+
+    /*let wawe=[];
+     var font=1;
+     var str = Array.from("Wouhouuuuu waaaawe");
+     for (let i = 0; i <= 5; i++) {
+         var y =str[i].fontsize(font);
+         font++;
+         wawe.push(y);
+     }
+     for (let i = 6; i <= 11; i++) {
+         var y =str[i].fontsize(font);
+         font--;
+         wawe.push(y);
+     }
+     for (let i = 12; i <= 17; i++) {
+         var y =str[i].fontsize(font);
+         font--;
+         wawe.push(y);
+     }
+     document.getElementById("target").innerHTML = wawe.join('');*/
 
 })();
