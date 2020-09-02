@@ -9,8 +9,50 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    // your code here
+    var partOne = 460;
+    var partTwo = 0;
+    var partThree = 0;
+    var partFour = 0;
+    var a = "0" + partTwo;
+    var b = "0" + partThree;
+    var c = "0" + partFour;
+    target.innerHTML = "0" + partOne + a + b + c;
+
+    document.getElementById('part-one').onclick = function () {
+        partOne++;
+        target.innerHTML = "O" + partOne + a + b + c;
+    }
+    document.getElementById('part-two').onclick = function () {
+        partTwo++;
+        if (partTwo < 10) {
+            a = "0" + partTwo
+        } else {
+            a = partTwo
+        }
+        ;
+        target.innerHTML = "0" + partOne + a + b + c;
+    }
+    document.getElementById('part-three').onclick = function () {
+        partThree++;
+        if (partThree < 10) {
+            b = "0" + partThree
+        } else {
+            b = partThree
+        }
+        ;
+        target.innerHTML = "0" + partOne + a + b + c;
+    }
+    document.getElementById('part-four').onclick = function () {
+        partFour++;
+        if (partFour < 10) {
+            c = "0" + partFour
+        } else {
+            c = partFour
+        }
+        ;
+        target.innerHTML = "0" + partOne + a + b + c;
+    }
 
 })();
