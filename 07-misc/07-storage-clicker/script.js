@@ -9,8 +9,18 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
+(function () {
+    increment.onclick = function () {
+        if (typeof (Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount) + 1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+            document.getElementById("target").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+        } else {
+            document.getElementById("target").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+    }
 
 })();
