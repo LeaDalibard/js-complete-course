@@ -10,18 +10,20 @@
 // You will have time to focus on it later.
 
 (function () {
-    var txt = 'Wouhouuuuu waaaawe';
-    let j = 1
+    var txt = document.getElementById("target").textContent;
+    document.getElementById("target").innerHTML = "";
+    let j = 1;
+    let n = 1;
     for (let i = 0; i < txt.length; i++) {
-        if (i < txt.length && i < 6) {
-            var y = txt.charAt(i).fontsize(j);
-            document.getElementById("target").innerHTML += y;
-            j++;
+        var y = txt.charAt(i).fontsize(j);
+        document.getElementById("target").innerHTML += y;
+        if (i % 7 === 0) {
+            n++;
         }
-        if (i < txt.length && i > 5) {
-            var y = txt.charAt(i).fontsize(j);
-            document.getElementById("target").innerHTML += y;
-            j--;
+        if (n % 2 === 0) {
+            j++
+        } else {
+            j--
         }
     }
 
