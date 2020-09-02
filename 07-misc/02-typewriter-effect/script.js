@@ -11,13 +11,16 @@
 
 (function() {
     var txt = document.getElementById('target').textContent;
-
+    document.getElementById("target").innerHTML = "";
+    var i = 0;
+    var speed=50;
 
     function typeWriter() {
         if (i < txt.length) {
             document.getElementById("target").innerHTML += txt.charAt(i);
             i++;
-            setTimeout(typeWriter, (50));
+            speed=Math.floor(Math.random() * 500);
+            setTimeout(typeWriter, speed);
         }
     }
 
