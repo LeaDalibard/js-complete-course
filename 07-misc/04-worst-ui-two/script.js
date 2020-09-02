@@ -21,11 +21,11 @@
     target.innerHTML = "0" + partOne + a + b + c;
 
     document.getElementById('part-one').onclick = function () {
-        partOne++;
+        if (partOne<499) {partOne++};
         target.innerHTML = "O" + partOne + a + b + c;
     }
     document.getElementById('part-two').onclick = function () {
-        partTwo++;
+        if (partTwo<99) {partTwo++};
         if (partTwo < 10) {
             a = "0" + partTwo
         } else {
@@ -35,7 +35,7 @@
         target.innerHTML = "0" + partOne + a + b + c;
     }
     document.getElementById('part-three').onclick = function () {
-        partThree++;
+        if (partThree<99) {partThree++};
         if (partThree < 10) {
             b = "0" + partThree
         } else {
@@ -45,7 +45,7 @@
         target.innerHTML = "0" + partOne + a + b + c;
     }
     document.getElementById('part-four').onclick = function () {
-        partFour++;
+        if (partFour<99) {partFour++};
         if (partFour < 10) {
             c = "0" + partFour
         } else {
