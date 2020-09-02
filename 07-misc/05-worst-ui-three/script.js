@@ -11,6 +11,52 @@
 
 (function() {
 
-    // your code here
+    var partOne = 460;
+    var partTwo = 0;
+    var partThree = 0;
+    var partFour =0;
+    var a = "0" + partTwo;
+    var b = "0" + partThree;
+    var c = "0" + partFour;
+    target.innerHTML = "0" + partOne + a + b + c;
+
+    document.getElementById('fix-part-one').onclick = function () {
+        partOne=460+Math.floor(Math.random() * 40);
+        document.getElementById("part-one").value=partOne;
+        target.innerHTML = "0" + partOne + a + b + c;
+    }
+    document.getElementById('fix-part-two').onclick = function () {
+        partTwo=Math.floor(Math.random() * 100);
+        document.getElementById("part-two").value= partTwo;
+        if (partTwo < 10) {
+            a = "0" + partTwo
+        } else {
+            a = partTwo
+        }
+        ;
+        target.innerHTML = "0" + partOne + a + b + c;
+    }
+    document.getElementById('fix-part-three').onclick = function () {
+        partThree=Math.floor(Math.random() * 100);
+        document.getElementById("part-three").value=  partThree;
+        if (partThree < 10) {
+            b = "0" + partThree
+        } else {
+            b = partThree
+        }
+        ;
+        target.innerHTML = "0" + partOne + a + b + c;
+    }
+    document.getElementById('fix-part-four').onclick = function () {
+        partFour=Math.floor(Math.random() * 100);
+        document.getElementById("part-four").value=  partFour;
+        if (partFour < 10) {
+            c = "0" + partFour
+        } else {
+            c = partFour
+        }
+        ;
+        target.innerHTML = "0" + partOne + a + b + c;
+    }
 
 })();
