@@ -14,7 +14,7 @@
     var slider = document.getElementById("slider");
     target.innerHTML ="0"+ slider.value;
     slider.oninput = function() {
-        target.innerHTML = "O"+this.value;
+        target.innerHTML = "0"+this.value;
     }
 
 })();
