@@ -10,7 +10,24 @@
 // You will have time to focus on it later.
 
 (function() {
+    let x=Math.floor(Math.random()*101);
+    let count=1;
+    var guess = prompt("Please guess the number between 1 and 100");
 
-    // your code here
+    while (guess !=x) {
+    if (guess < x) {
+        var guess = prompt("Higher!");
+        count++;
+    }
+    if (guess > x) {
+        var guess = prompt("Lower!");
+        count++;
+    }
+    }
+
+    alert("That's it! You needed "+count+" guesses.");
+
+
+
 
 })();
