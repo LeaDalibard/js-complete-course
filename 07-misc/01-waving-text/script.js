@@ -15,7 +15,7 @@
     let j = 1;
     let n = 1;
     let i = 0;
-    let font=[];
+    let font = [];
     for (let i = 0; i < txt.length; i++) {
         var y = txt.charAt(i).fontsize(j);
         font.push(j);
@@ -37,20 +37,34 @@
     function frame() {
         var newTxt = txtFont;
         if (i >= txt.length) {
+            var partOne="";
+            var partTwo="";
             i = 0;
             var newTxt = txtFont;
-            var z = newTxt.charAt(i).fontsize(font[i+1]);
-            document.getElementById("target").innerHTML +=z;
+            var z = newTxt.charAt(i).fontsize(font[i + 1]);
+            for (l = 1; l < i; l++) {
+                partOne=partOne+newTxt.charAt(l).fontsize(font[l]);
+            }
+            for (l = i + 1; l < txt.length; l++) {
+                partTwo =partTwo+ newTxt.charAt(l).fontsize(font[l]);
+            }
+            document.getElementById("target").innerHTML = partOne + z + partTwo;
             newTxt = document.getElementById("target").textContent;
         } else {
-            var z = newTxt.charAt(i).fontsize(font[i+1]);
-            document.getElementById("target").innerHTML +=z;
-            ;
+            var z = newTxt.charAt(i).fontsize(font[i + 1]);
+            for (l = 1; l < i; l++) {
+                partOne =partOne+newTxt.charAt(l).fontsize(font[l]);
+            }
+            for (l = i + 1; l < txt.length; l++) {
+               partTwo =partTwo+newTxt.charAt(l).fontsize(font[l]);
+            }
+            document.getElementById("target").innerHTML = partOne + z + partTwo;
             newTxt = document.getElementById("target").textContent;
             i++;
         }
     }
-    var id = setInterval(frame, 100);
+
+    var id = setInterval(frame, 300);
 
 })();
 
