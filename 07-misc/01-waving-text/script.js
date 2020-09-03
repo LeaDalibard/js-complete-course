@@ -41,11 +41,11 @@
             var partTwo="";
             i = 0;
             var newTxt = txtFont;
-            var z = newTxt.charAt(i+1).fontsize(font[i + 1]);
-            for (l = 1; l < i; l++) {
+            var z = newTxt.charAt(i).fontsize(font[i + 1]);
+            for (l = 0; l < i; l++) {
                 partOne=partOne+newTxt.charAt(l).fontsize(font[l]);
             }
-            for (l = i + 1; l < txt.length; l++) {
+            for (l = i+1; l < txt.length; l++) {
                 partTwo =partTwo+ newTxt.charAt(l).fontsize(font[l]);
             }
             document.getElementById("target").innerHTML = partOne + z + partTwo;
@@ -54,10 +54,10 @@
             var partOne="";
             var partTwo="";
             var z = newTxt.charAt(i).fontsize(font[i + 1]);
-            for (l = 1; l < i; l++) {
+            for (l = 0; l < i; l++) {
                 partOne =partOne+newTxt.charAt(l).fontsize(font[l]);
             }
-            for (l = i + 1; l < txt.length; l++) {
+            for (l = i +1; l < txt.length; l++) {
                partTwo =partTwo+newTxt.charAt(l).fontsize(font[l]);
             }
             document.getElementById("target").innerHTML = partOne + z + partTwo;
