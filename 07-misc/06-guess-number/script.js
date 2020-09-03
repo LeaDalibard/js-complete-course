@@ -15,13 +15,12 @@
     var guess = prompt("Please guess the number between 1 and 100");
 
     while (guess !=x) {
+        count++;
     if (guess < x) {
         var guess = prompt("Higher!");
-        count++;
     }
     if (guess > x) {
         var guess = prompt("Lower!");
-        count++;
     }
     }
 
