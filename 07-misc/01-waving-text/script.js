@@ -12,26 +12,46 @@
 (function () {
     var txt = document.getElementById("target").textContent;
     document.getElementById("target").innerHTML = "";
-        var j = 1;
-        var n = 1;
-        for (let i = 0; i < txt.length; i++) {
-            var id = setInterval(frame, 1000);
-            function frame() {
-                if (i==txt.length) {
-                    clearInterval(id);
-                } else {
-                var y = txt.charAt(i).fontsize(j);
-                document.getElementById("target").innerHTML += y}
-                if (i % 7 === 0) {
-                    n++;
-                }
-                if (n % 2 === 0) {
-                    j++
-                } else {
-                    j--
-                }
-            }
+    let j = 1;
+    let n = 1;
+    let i = 0;
+    let font=[];
+    for (let i = 0; i < txt.length; i++) {
+        var y = txt.charAt(i).fontsize(j);
+        font.push(j);
+        document.getElementById("target").innerHTML += y;
+        if (i % 6 === 0) {
+            n++;
         }
+        ;
+        if (n % 2 === 0) {
+            j++
+        } else {
+            j--
+        }
+    }
+
+    var txtFont = document.getElementById("target").textContent;
+
+
+    function frame() {
+        var newTxt = txtFont;
+        if (i >= txt.length) {
+            i = 0;
+            var newTxt = txtFont;
+            var z = newTxt.charAt(i).fontsize(font[i+1]);
+            document.getElementById("target").innerHTML +=z;
+            newTxt = document.getElementById("target").textContent;
+        } else {
+            var z = newTxt.charAt(i).fontsize(font[i+1]);
+            document.getElementById("target").innerHTML +=z;
+            ;
+            newTxt = document.getElementById("target").textContent;
+            i++;
+        }
+    }
+    var id = setInterval(frame, 100);
+
 })();
 
 /* document.getElementById("target").substr(10).animate([
