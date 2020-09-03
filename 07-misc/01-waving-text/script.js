@@ -41,7 +41,7 @@
             var partTwo="";
             i = 0;
             var newTxt = txtFont;
-            var z = newTxt.charAt(i).fontsize(font[i + 1]);
+            var z = newTxt.charAt(i+1).fontsize(font[i + 1]);
             for (l = 1; l < i; l++) {
                 partOne=partOne+newTxt.charAt(l).fontsize(font[l]);
             }
@@ -51,6 +51,8 @@
             document.getElementById("target").innerHTML = partOne + z + partTwo;
             newTxt = document.getElementById("target").textContent;
         } else {
+            var partOne="";
+            var partTwo="";
             var z = newTxt.charAt(i).fontsize(font[i + 1]);
             for (l = 1; l < i; l++) {
                 partOne =partOne+newTxt.charAt(l).fontsize(font[l]);
