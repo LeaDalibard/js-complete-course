@@ -22,7 +22,7 @@
 
     document.getElementById('part-one').onclick = function () {
         if (partOne<499) {partOne++};
-        target.innerHTML = "O" + partOne + a + b + c;
+        target.innerHTML = "0" + partOne + a + b + c;
     }
     document.getElementById('part-two').onclick = function () {
         if (partTwo<99) {partTwo++};
