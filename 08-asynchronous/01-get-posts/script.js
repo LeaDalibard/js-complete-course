@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-})();
+   setTimeout(function (){
+       console.log(articles)
+   }, 5000);}
+)();
+
+let articles = [];
+document.getElementById("run").addEventListener("click", () => {
+    if (error) {
+       throw error;
+    }
+    articles.push(window.lib.getPosts());
+});
