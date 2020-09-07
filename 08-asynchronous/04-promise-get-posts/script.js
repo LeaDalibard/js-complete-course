@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let run = document.getElementById("run");
+    run.addEventListener("click", getPosts)
+
+    function getPosts(){window.lib.getPosts().then(function(result){
+            console.log(result);
+        })}
+
 })();
