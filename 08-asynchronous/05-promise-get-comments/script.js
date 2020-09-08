@@ -10,5 +10,33 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let run = document.getElementById("run");
+
+    run.addEventListener("click", getPosts)
+
+    function getPosts() {
+        let promisePost = Promise.resolve(window.lib.getPosts())
+            promisePost.then(posts =>  {
+                posts.forEach(post => {
+                    let promiseComments = Promise.resolve(window.lib.getComments(post.id))
+                    promiseComments.then(promiseComment=>{
+                        post.comment=promiseComment;
+                        console.log(post);
+
+                    })
+                })
+
+
+            })
+
+    }
+
 })();
+/*faireQqc()
+.then(result => faireAutreChose(result))
+.then(newResult => faireUnTroisiemeTruc(newResult))
+.then(finalResult => {
+  console.log('Résultat final : ' + finalResult);
+})
+
+*/
