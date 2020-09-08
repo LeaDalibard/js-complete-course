@@ -13,8 +13,12 @@
     let run = document.getElementById("run");
     run.addEventListener("click", getPosts)
 
-    function getPosts(){window.lib.getPosts().then(function(result){
-            console.log(result);
-        })}
+
+    function getPosts() {
+        let promisePost = Promise.resolve(window.lib.getPosts())
+        promisePost.then(post => {
+            console.log(post)
+        })
+    }
 
 })();
