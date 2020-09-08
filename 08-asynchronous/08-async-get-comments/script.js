@@ -10,14 +10,22 @@
 // You will have time to focus on it later.
 
 (() => {
-    run=document.getElementById("run")
-    run.addEventListener("click", getComments)
+    run = document.getElementById("run")
+    run.addEventListener("click", getPosts)
 
-    async function getComments(){
-        const post= await getPosts()
-        async function getPosts(){
+        async function getPosts() {
+            const posts = await window.lib.getPosts()
+            posts.forEach(post => {
+                async function comment() {
+                    const comments = await window.lib.getComments(post.id)
+                    post.comment= comments
+                    console.log(post);
+                }
+                comment();
 
-        }
+        })
 
     }
+
+
 })();
