@@ -10,5 +10,28 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-})();
+    let run = document.getElementById("run");
+    run.addEventListener("click", getPersons);
+
+    function getPersons(){
+        let promisePerson= Promise.resolve(window.lib.getPersons())
+        promisePerson.then(person=>{console.log(person)});
+        promisePerson.catch(error=>{console.error(error)})
+
+    }
+
+/*  function getAsyncData(someValue){
+      return new Promise(function(resolve, reject){
+          getData(someValue, function(error, result){
+              if(error){
+                  reject(error);
+              }
+              else{
+                  resolve(result);
+              }
+          })
+      });
+  }*/
+
+})
+();
