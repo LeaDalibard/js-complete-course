@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    run=document.getElementById("run")
+    run.addEventListener("click", getComments)
+
+    async function getComments(){
+        const post= await getPosts()
+        async function getPosts(){
+
+        }
+
+    }
 })();
