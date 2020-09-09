@@ -10,5 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    run.addEventListener("click", getHeroes)
+    function getHeroes() {
+        var Hname=document.getElementById("hero-name").value
+        var HalterEgo=document.getElementById("hero-alter-ego").value
+        var Hpower=document.getElementById("hero-powers").value
+        var Habilities = Hpower.split(",");
+
+        fetch("http://localhost:3000/heroes")
+            .then(response => response.json())
+            .then(function (heroes) {
+                if (Hname ==""||HalterEgo== ""||Hpower== ""){
+                    alert("Please fill all the fields")
+                }
+                else{
+                    var newHeroe={id:heroes.length, name:Hname,alterEgo:HalterEgo, abilities:Habilities}
+                    heroes.push(newHeroe);
+                    console.log(heroes)
+                }
+
+            })
+    }
+
 })();
