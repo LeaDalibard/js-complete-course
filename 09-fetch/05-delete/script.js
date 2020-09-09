@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    run.addEventListener("click", deleteHeroe)
+
+    function deleteHeroe(){
+        var heroId=document.getElementById("hero-id").value
+        fetch("http://localhost:3000/heroes")
+            .then(response => response.json())
+            .then(function (heroes) {
+                for (i=0; i<heroes.length; i++){
+                    if (heroes[i].id==heroId){heroes.splice(i,1)}
+                }
+                console.log(heroes)
+            })
+
+    }
+
 })();
