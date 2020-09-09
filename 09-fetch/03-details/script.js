@@ -16,6 +16,25 @@
         var heroId = document.getElementById("hero-id").value
         fetch("http://localhost:3000/heroes")
             .then(response => response.json())
+            .then(heroes=>{
+                heroes.forEach((heroe)=>{
+                    if(heroe.id==heroId){
+                        var tmpl = document.getElementById('tpl-hero').content.cloneNode(true);
+                        tmpl.querySelector('.name').innerText = heroe.name;
+                        tmpl.querySelector('.alter-ego').innerText = heroe.alterEgo;
+                        tmpl.querySelector('.powers').innerText = heroe.abilities;
+                        document.getElementById('target').appendChild(tmpl);
+                    }
+                })
+            })
+    }
+})();
+
+/*
+function getHeroes() {
+        var heroId = document.getElementById("hero-id").value
+        fetch("http://localhost:3000/heroes")
+            .then(response => response.json())
             .then(function (heroes) {
                 for (var i = 0; i < heroes.length; i++){
                     if(heroes[i].id==heroId){
@@ -28,4 +47,4 @@
                 }
             })
     }
-})();
+ */
