@@ -10,5 +10,22 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    run.addEventListener("click", getHeroes)
+
+    function getHeroes() {
+        var heroId = document.getElementById("hero-id").value
+        fetch("http://localhost:3000/heroes")
+            .then(response => response.json())
+            .then(function (heroes) {
+                for (var i = 0; i < heroes.length; i++){
+                    if(heroes[i].id==heroId){
+                        var tmpl = document.getElementById('tpl-hero').content.cloneNode(true);
+                        tmpl.querySelector('.name').innerText = heroes[i].name;
+                        tmpl.querySelector('.alter-ego').innerText = heroes[i].alterEgo;
+                        tmpl.querySelector('.powers').innerText = heroes[i].abilities;
+                        document.getElementById('target').appendChild(tmpl);
+                    }
+                }
+            })
+    }
 })();
