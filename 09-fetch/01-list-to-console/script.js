@@ -12,5 +12,6 @@
 (() => {
     fetch("http://localhost:3000/heroes")
         .then(response=>response.json())
-        .then(function(heroes){console.log(heroes)})
+        .then(heroes=>{
+            console.log(heroes)})
 })();
